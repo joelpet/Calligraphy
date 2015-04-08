@@ -56,9 +56,13 @@ no default font and use the default attribute of `R.id.fontPath`._
 Wrap the `Activity` Context:
 
 ```java
-@Override
-protected void attachBaseContext(Context newBase) {
-    super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
+public class MyActivity extends Activity {
+    // ...
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
+    }
+    // ...
 }
 ```
 
